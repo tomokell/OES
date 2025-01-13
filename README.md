@@ -10,9 +10,9 @@ Pseudocontinuous arterial spin labeling (PCASL) is a non-invasive MRI method to 
 
 However, for complicated vessel geometries, it is not clear how to choose these modulation patterns to achieve an optimal encoding, allowing clean separation of arterial signals with high SNR. The optimal encoding scheme (OES) gives an automated way of optimally choosing these encodings (i.e. their direction, spatial frequency and phase). In essence, it represents the vessels on a grid, with a +1 assigned to vessels which we want to place in the control condition and -1 to those in the label condition. The Fourier transform of this representation is taken, weighted and masked, and the maximum point in this space tells us the optimal parameters to best match this desired encoding. An example encoding is given below for nine blood vessels in an arrangement found above the circle of Willis in the brain, with white dots representing vessels to be placed in the control condition and black dots for those to be labelled and the achieved encoding as a color underlay:
 
-<figure style="text-align: center;">
-    <img src="Example_encoding.png" alt="Example encoding" width="400">
-</figure>
+<p align="center">
+<img src="Example_encoding.png"  width="400">
+</p>
 
 This idea can be extended to correct for off-resonance effects. If the additional phase accrued by a vessel between two PCASL pulses is $\psi$, then we can use the OES approach but now represent each vessel as $e^{i[-\psi]}$ for the label condition and $e^{i[\pi-\psi]}$ for the control condition. The OES then calculates the optimal encodings that undo the effects of off-resonance and produce the desired encoding patterns. This works equally well for conventional PCASL or VEPCASL.
 
